@@ -30,4 +30,5 @@ Live Sass Compiler
 ## Comments
 
 - header>nav
-- header>nav>a with the logo
+- header>nav>a (logo, hamburguer, request button)
+- header>nav>div>a\*6 for the multiple buttons
