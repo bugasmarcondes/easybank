@@ -1,0 +1,26 @@
+//  @media (min-width: 64em)
+
+// from the smallest (default) to the biggest
+$breakpoints-up: (
+  'medium': calculateEm(640px),
+  'large': calculateEm(1024px),
+  'xlarge': calculateEm(1400px),
+);
+
+$breakpoints-down: (
+  'small': calculateEm(639px),
+  'medium': calculateEm(1023px),
+  'large': calculateEm(1399px),
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

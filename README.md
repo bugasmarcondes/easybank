@@ -15,7 +15,8 @@
 
 ## Emmet
 
-link:css script:src
+- link:css
+- script:src
 
 ## Extensions
 
@@ -26,20 +27,7 @@ Live Sass Compiler
   - Watch Sass files
   - Go Live
 
-## JS
-
-- document.querySelector('.header');
-- document.querySelectorAll('.has-fade');
-- header.classList.contains('open')
-- body.classList.remove('noscroll')
-- body.classList.add('noscroll')
-
 ## Comments
 
 - header>nav
 - header>nav>a with the logo
-
-## Continue
-
-https://www.youtube.com/watch?v=aoQ6S1a32j8&t=4888s
-# easybank
