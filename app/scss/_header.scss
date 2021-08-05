@@ -1,8 +1,4 @@
 .header {
-  nav {
-    padding: calculateRem(17px) calculateRem(24px);
-  }
-
   &__logo {
     img {
       width: calculateRem(141px);
@@ -10,7 +6,7 @@
     }
   }
 
-  &__menu {
+  &__toggle {
     > span {
       display: block;
       width: 26px;
@@ -21,6 +17,23 @@
       &:not(:last-child) {
         margin-bottom: 5px;
       }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $white;
+    margin-top: calculateRem(24px);
+    padding: calculateRem(26px);
+    border-radius: 5px;
+    a {
+      display: block;
+      padding: calculateRem(10px);
+      color: $darkBlue;
+      text-align: center;
     }
   }
 
@@ -64,7 +77,7 @@
   }
 
   &.open {
-    .header__menu {
+    .header__toggle {
       > span:first-child {
         transform: rotate(45deg);
       }
@@ -80,10 +93,17 @@
   .overlay {
     visibility: hidden;
     position: fixed;
-    top: calculateRem(60px);
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-image: linear-gradient($darkBlue, transparent);
+  }
+
+  nav {
+    position: relative;
+    background-color: $white;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
   }
 }
