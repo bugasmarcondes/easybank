@@ -17,9 +17,18 @@ body {
   font-weight: 300;
   color: $grayishBlue;
   line-height: 1.3;
+  @include breakpoint-up(large) {
+    font-size: $font-med;
+  }
   &.noscroll {
     overflow: hidden;
   }
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
 }
 
 a,
@@ -30,8 +39,48 @@ a:hover {
 
 // Container
 .container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  max-width: calculateRem(1110px);
+  margin: 0 auto;
+  &--pall {
+    padding-top: 4.375rem;
+    padding-right: 1.5rem;
+    padding-bottom: 4.375rem;
+    padding-left: 1.5rem;
+    // @include breakpoint-up(large) {
+    //   padding-top: 6rem;
+    //   padding-bottom: 6rem;
+    // }
+  }
+  &--py {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    // @include breakpoint-up(large) {
+    //   padding-top: 6rem;
+    //   padding-bottom: 6rem;
+    // }
+  }
+  &--px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &--pt {
+    padding-top: 4.375rem;
+    // @include breakpoint-up(large) {
+    //   padding-top: 6rem;
+    // }
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
+  &--pb {
+    padding-bottom: 4.375rem;
+    // @include breakpoint-up(large) {
+    //   padding-bottom: 6rem;
+    // }
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
 }
 
 // Flexbox grid
@@ -49,6 +98,7 @@ a:hover {
 // Buttons
 button,
 .button {
+  display: inline-block;
   padding: calculateRem(14px) calculateRem(35px);
   background-image: linear-gradient(to right, $limeGreen, $brightCyan);
   border: 0;
@@ -56,6 +106,11 @@ button,
   cursor: pointer;
   color: $white;
   font-weight: 400;
+  font-size: $font-sm;
+  transition: opacity $ms-fast ease-in-out;
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 // Visibility
